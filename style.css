@@ -1,0 +1,82 @@
+body {
+    background-color: #2C2C34;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    position: relative;
+    overflow-x: hidden;
+    margin: 10px;
+    margin-top: 20px;
+}
+p {
+    color: #FFFFFF;
+    font-size: x-large;
+    margin: 10px;
+    text-align: center;
+}
+
+.blurred-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #978897;
+    border-radius: 50%;
+    filter: blur(40px); /* Add blur effect */
+    z-index: -1; /* Place behind content */
+    top: -68px;  /* Y-axis */
+    left: -83px; /* X-axis */
+}
+
+.blurred-circle2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #978897;
+    border-radius: 50%;
+    filter: blur(50px); /* Add blur effect */
+    z-index: -1; /* Place behind content */
+    top: 200PX;  /* Y-axis */
+    right: -50px; /* X-axis */
+}
+.content {
+    z-index: 1; /* Ensure content is above the blurred circle */
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    font-size: xx-large;
+    margin: 30px;
+}
+
+.spaced-text {
+    word-spacing: 45px;
+    margin-bottom: 80px;
+    
+}
+
+.spaced-text2 {
+    word-spacing: 5px;
+}
+
+.intro {
+    text-align: left; 
+    font-size: large;
+    margin-left: 130px;
+    margin-top: 115px;
+}
+
+.tisha {
+    color: #978897;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.image {
+    float: right ; 
+    margin-right: 140px;
+    object-fit: cover; /* Ensures the image fits in the square container */
+    border-radius: 50%; /* Makes the image circular */
+    transition: all 0.3s ease; /* Adds smooth transition */
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
