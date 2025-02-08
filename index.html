@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="Icon" href="build/img/wlogo.png">
+    <link rel="icon" href="build/img/wlogo.png">
+    
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="build/css/style.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="build/css/style.css">
+
+    <!-- Smooth Scrolling -->
     <style>
         html {
             scroll-behavior: smooth;
@@ -16,180 +23,157 @@
     </style>
 </head>
 
-<body class="font-roboto min-h-screen bg-[#EAE7DC] dark:bg-[#212A31] dark:text-white">
+<body class="font-roboto min-h-screen bg-[#EAE7DC] dark:bg-[#212A31] dark:text-white transition-all">
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-10 bg-[#EAE7DC] dark:bg-[#212A31] shadow-md">
-        <section class="max-w-6xl mx-1 p-4 flex items-center justify-between">
-            <!-- Logo Section -->
-            <div class="flex items-center justify-start">
-                <!-- Light logo visible only in light mode -->
-                <img src="build/img/lmlogo.png" alt="Logo Light" class="h-16 w-16 dark:hidden">
-                <!-- Dark logo visible only in dark mode -->
-                <img src="build/img/logo-D.png" alt="Logo Dark" class="h-16 w-16 hidden dark:block">
+        <section class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="build/img/lmlogo.png" alt="Light Logo" class="h-16 w-16 dark:hidden">
+                <img src="build/img/logo-D.png" alt="Dark Logo" class="h-16 w-16 hidden dark:block">
             </div>
-
-            <!-- Navigation Links -->
-            <nav class="flex space-x-10 text-2xl">
+    
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
                 <a href="#home" class="text-[#9B786F] hover:text-[#254E58] dark:text-white dark:hover:text-[#846e65]">HOME</a>
                 <a href="#about-me" class="text-[#9B786F] hover:text-[#254E58] dark:text-white dark:hover:text-[#EDC7B7]">ABOUT ME</a>
                 <a href="#education" class="text-[#9B786F] hover:text-[#254E58] dark:text-white dark:hover:text-[#EDC7B7]">EDUCATION</a>
             </nav>
-
-            <!-- Resume Button -->
+    
+            <!-- Theme Toggle & Resume Button -->
             <div class="flex items-center">
-                <button id="theme-toggle" class="p-2 rounded mr-1">
+                <button id="theme-toggle" class="p-2 rounded mr-2">
                     <span id="theme-icon">☀</span>
                 </button>
-                <a href="build/files/Tisha Resume Portfolio.pdf" download class="px-6 py-3 bg-[#254E58] dark:bg-[#EDC7B7] text-white rounded-xl flex items-center gap-2 mr-1">
+                <a href="build/files/Tisha Resume Portfolio.pdf" download class="px-5 py-2 bg-[#254E58] dark:bg-[#EDC7B7] text-white rounded-lg flex items-center gap-2">
                     Resume 
-                    <img src="build/img/Download.gif" alt="" class="w-8 h-8 rotate-90">
+                    <img src="build/img/Download.gif" alt="Download Icon" class="w-7 h-7 rotate-90">
                 </a>
             </div>
         </section>
     </header>
-
-    <!-- Social Icons and Contact Button Section -->
+    
+    
+    <!-- Social Icons & Contact Button -->
     <div class="fixed left-4 top-1/3 z-10 flex flex-col items-center space-y-6">
-        <!-- GitHub -->
         <a href="https://github.com/Tisha-S7" target="_blank" title="GitHub">
-            <img src="build/img/GitHub.png" alt="GitHub Light" class="w-10 h-10 dark:hidden">
-            <img src="build/img/GitHub-D.png" alt="GitHub Dark" class="w-10 h-10 hidden dark:block">
+            <img src="build/img/GitHub.png" class="w-10 h-10 dark:hidden">
+            <img src="build/img/GitHub-D.png" class="w-10 h-10 hidden dark:block">
         </a>
-
-        <!-- Email -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tisha.sachwani07@gmail.com" target="_blank" title="Email">
-            <img src="build/img/Mail.png" alt="Mail Light" class="w-8 h-8 dark:hidden">
-            <img src="build/img/Letter.png" alt="Mail Dark" class="w-8 h-8 hidden dark:block">
+        <a href="mailto:tisha.sachwani07@gmail.com" title="Email">
+            <img src="build/img/Mail.png" class="w-8 h-8 dark:hidden">
+            <img src="build/img/Letter.png" class="w-8 h-8 hidden dark:block">
         </a>
-
-        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/tisha-sachwani-824bb824b" target="_blank" title="LinkedIn">
-            <img src="build/img/LinkedIn.png" alt="LinkedIn Light" class="w-8 h-8 dark:hidden">
-            <img src="build/img/LinkedIn-D.png" alt="LinkedIn Dark" class="w-8 h-8 hidden dark:block">
+            <img src="build/img/LinkedIn.png" class="w-8 h-8 dark:hidden">
+            <img src="build/img/LinkedIn-D.png" class="w-8 h-8 hidden dark:block">
         </a>
-
-        <!-- Contact Me Button -->
-        <a href="#contact-me" class="mt-6 px-4 py-2 bg-[#D8C3A5] dark:bg-[#748D92] text-[#254E58] dark:text-white rounded-xl text-center">
+        <a href="#contact-me" class="mt-6 px-4 py-2 bg-[#D8C3A5] dark:bg-[#748D92] text-[#254E58] dark:text-white rounded-lg text-center">
             Contact Me
         </a>
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="relative flex justify-center h-[80vh] pl-16">
-        <div class="relative w-full ">
-            <!-- Profile Image (Light Mode) -->
-            <img src="build/img/HOME-1-(2).png" alt="Profile Image Light" class="absolute right-0 mt-36 transform -translate-y-1 max-w-[1100px] max-h-[1000px] object-contain dark:hidden ">
-            
-            <!-- Profile Image (Dark Mode) -->
-            <img src="build/img/HOME-D.png" alt="Profile Image Dark" class="absolute right-0 mt-36 transform -translate-y-1 max-w-[1100px] max-h-[1000px] hidden dark:block">
-        </div>
-    </section>
+<section id="home" class="flex justify-center h-[80vh] pl-16 pb-40">
+    <div class="relative w-full">
+        <img src="build/img/HOME-1-(2).png" class="absolute right-0 mt-36 transform -translate-y-1 max-w-[1085px] object-contain dark:hidden">
+        <img src="build/img/HOME-D.png" class="absolute right-0 mt-36 transform -translate-y-1 max-w-[1085px] hidden dark:block">
+    </div>
+</section>
 
-    <!-- About Me Section -->
-    <section id="about-me" class="max-w-6xl mx-auto p-8 text-center pt-[150px] pl-32">
-        <div class="flex justify-center items-center space-x-4 mb-4">
-            <h2 class="text-3xl font-bold text-[#254E58] dark:text-[#EDC7B7]">ABOUT ME</h2>
-            <!-- Light Mode Image -->
-            <img src="build/img/Female-Profile.png" alt="Profile Icon Light" class="w-8 h-8 dark:hidden">
-            <!-- Dark Mode Image -->
-            <img src="build/img/Female-Profile-D.png" alt="Profile Icon Dark" class="w-8 h-8 hidden dark:block">
+<!-- About Me -->
+<section id="about-me" class="max-w-6xl mx-auto p-8 mt-56 scroll-mt-48">
+    <!-- Title & Icon Side by Side -->
+    <div class="flex items-center justify-center space-x-3">
+        <h2 class="text-3xl font-bold text-[#254E58] dark:text-[#EDC7B7]">ABOUT ME</h2>
+        <!-- Light Mode Image -->
+        <img src="build/img/Female-Profile.png" alt="Profile Icon Light" class="w-10 h-10 dark:hidden">
+        <!-- Dark Mode Image -->
+        <img src="build/img/Female-Profile-D.png" alt="Profile Icon Dark" class="w-10 h-10 hidden dark:block">
+    </div>
+
+    <!-- About Me Text -->
+    <p class="text-[#9B786F] dark:text-white text-lg max-w-2xl mx-auto text-center mt-4">
+        I’m Tisha Sachwani, a 3rd-year B.E. student in CSD at SVIT, Vasad. Passionate about UI/UX design and front-end development.
+    </p>
+
+    <!-- Skills Section -->
+    <div class="flex flex-col items-center space-y-8 mt-6">
+        <div class="flex flex-col items-center">
+            <h3 class="font-bold mb-2 text-[#254E58] dark:text-[#EDC7B7]">Soft Skills</h3>
+            <p class="text-[#9B786F] dark:text-white">Creativity | Problem-Solving | Attention to Detail</p>
         </div>
-        <p class="mb-8 text-[#9B786F] dark:text-white">I’m Tisha Sachwani, a 3rd-year B.E. student in CSD at SVIT, Vasad. Passionate about UI/UX design and front-end development, I specialize in HTML, CSS, Figma, and Blender, creating intuitive, responsive digital experiences.</p>
-        <div class="flex flex-col items-center space-y-8">
-            <div class="flex flex-col items-center">
-                <h3 class="font-bold mb-2 text-[#254E58] dark:text-[#EDC7B7]">Soft Skills</h3>
-                <p class="text-[#9B786F] dark:text-white">Creativity | Problem-Solving | Attention to Detail</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <h3 class="font-bold mb-2 text-[#254E58] dark:text-[#EDC7B7]">Technical Skills</h3>
-                <p class="text-[#9B786F] dark:text-white">HTML | CSS | Figma | Blender | UI/UX Design</p>
-            </div>
+        <div class="flex flex-col items-center">
+            <h3 class="font-bold mb-2 text-[#254E58] dark:text-[#EDC7B7]">Technical Skills</h3>
+            <p class="text-[#9B786F] dark:text-white">HTML | CSS | Figma | Blender | UI/UX Design</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Education Section -->
-    <section id="education" class="max-w-6xl mx-auto p-8 pt-[100px] pl-32">
-        <div class="flex justify-center items-center space-x-4 mb-8">
-            <h2 class="text-3xl font-bold text-[#254E58] dark:text-[#EDC7B7]">EDUCATION</h2>
-            <!-- Light Mode Icon -->
-            <img src="build/img/Graduate.png" alt="Education Icon Light" class="w-8 h-8 dark:hidden">
-            <!-- Dark Mode Icon -->
-            <img src="build/img/Graduate-D.png" alt="Education Icon Dark" class="w-8 h-8 hidden dark:block">
-        </div>
-        <div class="relative">
-            <!-- Animated Background using an Image -->
-            <img src="build/img/Animation - 1738503555979.gif" alt="Background Animation" 
-                 class="absolute inset-0 w-full h-full object-contain z-[-1] opacity-50">
+<section id="education" class="max-w-6xl mx-auto p-8 pt-[100px] pl-32">
+    <div class="flex justify-center items-center space-x-4 mb-8">
+        <h2 class="text-3xl font-bold text-[#254E58] dark:text-[#EDC7B7]">EDUCATION</h2>
+        <!-- Light Mode Icon -->
+        <img src="build/img/Graduate.png" alt="Education Icon Light" class="w-8 h-8 dark:hidden">
+        <!-- Dark Mode Icon -->
+        <img src="build/img/Graduate-D.png" alt="Education Icon Dark" class="w-8 h-8 hidden dark:block">
+    </div>
 
-            <!-- Content Section -->
-            <div class="relative grid grid-cols-1 md:grid-cols-3 gap-4 px-8 py-8">
-                <!-- 10th Grade -->
-                <div class="bg-[#244855] dark:bg-[#124E66] p-4 rounded-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl w-40 mx-auto">
-                    <h3 class="font-bold text-[#FBE9D0] dark:text-white text-sm">10th Grade</h3>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">New Era School</p>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">2020</p>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">Percentage: 91%</p>
-                </div>
-                <!-- 12th Grade -->
-                <div class="bg-[#244855] dark:bg-[#124E66] p-4 rounded-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl w-40 mx-auto">
-                    <h3 class="font-bold text-[#FBE9D0] dark:text-white text-sm">12th Grade</h3>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">URMI School</p>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">2022</p>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">Percentage: 87%</p>
-                </div>
-                <!-- B.E. in CSD -->
-                <div class="bg-[#244855] dark:bg-[#124E66] p-4 rounded-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl w-40 mx-auto">
-                    <h3 class="font-bold text-[#FBE9D0] dark:text-white text-sm">B.E. in CSD</h3>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">SVIT, Vasad</p>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">2022 - 2026</p>
-                    <p class="text-[#FBE9D0] dark:text-white text-xs">Current SPI: 8.91</p>
-                </div>
+    <div class="relative">
+        <!-- Animated Background using an Image -->
+        <img src="build/img/Animation - 1738503555979.gif" alt="Background Animation" 
+             class="absolute inset-0 w-full h-full object-contain z-[-1] opacity-50">
+    
+        <!-- Content Section -->
+        <div class="relative grid grid-cols-1 md:grid-cols-3 gap-4 px-8 py-8">
+            <!-- 10th Grade -->
+            <div class="bg-[#244855] dark:bg-[#124E66] p-4 rounded-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl w-40 mx-auto">
+                <h3 class="font-bold text-[#FBE9D0] dark:text-white text-sm">10th Grade</h3>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">New Era School</p>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">2020</p>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">Percentage: 91%</p>
+            </div>
+            <!-- 12th Grade -->
+            <div class="bg-[#244855] dark:bg-[#124E66] p-4 rounded-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl w-40 mx-auto">
+                <h3 class="font-bold text-[#FBE9D0] dark:text-white text-sm">12th Grade</h3>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">URMI School</p>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">2022</p>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">Percentage: 87%</p>
+            </div>
+            <!-- B.E. in CSD -->
+            <div class="bg-[#244855] dark:bg-[#124E66] p-4 rounded-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl w-40 mx-auto">
+                <h3 class="font-bold text-[#FBE9D0] dark:text-white text-sm">B.E. in CSD</h3>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">SVIT, Vasad</p>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">2022 - 2026</p>
+                <p class="text-[#FBE9D0] dark:text-white text-xs">Current SPI: 8.91</p>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
 
-    <!-- Connect Me Section -->
-    <section id="contact-me" class="max-w-6xl mx-auto p-8 text-center pt-[100px] pl-32">
-        <div class="flex justify-center items-center space-x-4 mb-4">
-            <h2 class="text-3xl font-bold text-[#254E58] dark:text-[#EDC7B7]">CONNECT WITH ME</h2>
-            <!-- Light Mode Icon -->
-            <img src="build/img/Link.png" alt="Connect Icon Light" class="w-8 h-8 dark:hidden">
-            <!-- Dark Mode Icon -->
-            <img src="build/img/Link-D.png" alt="Connect Icon Dark" class="w-8 h-8 hidden dark:block">
-        </div>
-        <div class="bg-[#9B786F] dark:bg-[#124E66] p-3 rounded-lg w-80 mx-auto relative">
+    <!-- Contact Form -->
+    <section id="contact-me" class="max-w-6xl mx-auto p-8 text-center">
+        <h2 class="text-3xl font-bold text-[#254E58] dark:text-[#EDC7B7]">CONNECT WITH ME</h2>
+        <div class="bg-[#9B786F] dark:bg-[#124E66] p-4 rounded-lg w-80 mx-auto">
             <form class="space-y-4 flex flex-col">
-                <div class="flex space-x-4">
-                    <div class="flex-1 space-y-1 text-left">
-                        <label for="name" class="text-white text-sm font-bold">Name</label>
-                        <input type="text" id="name" class="p-2 w-full rounded-lg bg-[#D8C3A5] dark:bg-[#EDC7B7] text-sm">
-                    </div>
-                    <div class="flex-1 space-y-1 text-left">
-                        <label for="email" class="text-white text-sm font-bold">Email</label>
-                        <input type="email" id="email" class="p-2 w-full rounded-lg bg-[#D8C3A5] dark:bg-[#EDC7B7] text-sm">
-                    </div>
-                </div>
-                <div class="space-y-1 text-left">
-                    <label for="message" class="text-white text-sm font-bold">Message</label>
-                    <textarea id="message" class="p-2 w-full rounded-lg bg-[#D8C3A5] dark:bg-[#EDC7B7] text-sm" rows="3"></textarea>
-                </div>
+                <input type="text" placeholder="Name" class="p-2 w-full rounded bg-[#D8C3A5] dark:bg-[#EDC7B7]">
+                <input type="email" placeholder="Email" class="p-2 w-full rounded bg-[#D8C3A5] dark:bg-[#EDC7B7]">
+                <textarea placeholder="Message" class="p-2 w-full rounded bg-[#D8C3A5] dark:bg-[#EDC7B7]" rows="3"></textarea>
+                <button type="submit" class="px-4 py-1 bg-[#254E58] dark:bg-[#748D92] text-white rounded-lg hover:bg-[#50B3A2]">Submit</button>
             </form>
-        </div>
-        <div class="text-right mt-2 w-80 mx-auto">
-            <button type="submit" class="px-4 py-1 bg-[#254E58] dark:bg-[#748D92] text-white dark:text-white rounded-lg hover:bg-[#50B3A2] text-sm">
-                Submit
-            </button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#254E58] dark:bg-[#EDC7B7] text-white text-center dark:text-[#124E66] py-4 mt-8">
+    <footer class="bg-[#254E58] dark:bg-[#EDC7B7] text-white text-center py-4 mt-8">
         <p class="text-sm">&copy; 2025 Tisha Sachwani. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Theme Toggle -->
+    <!-- Dark Mode JavaScript -->
     <script>
         const themeToggle = document.getElementById("theme-toggle");
         const themeIcon = document.getElementById("theme-icon");
@@ -215,7 +199,5 @@
             }
         });
     </script>
-
 </body>
-
 </html>
