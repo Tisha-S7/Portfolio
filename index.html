@@ -45,7 +45,7 @@
             <!-- Theme Toggle & Resume Button -->
             <div class="flex items-center">
                 <button id="theme-toggle" class="p-2 rounded mr-2">
-                    <span id="theme-icon">☀</span>
+                    <span id="theme-icon">☀️</span>
                 </button>
                 <a href="build/files/Tisha Resume Portfolio.pdf" download class="px-5 py-2 bg-[#254E58] dark:bg-[#EDC7B7] text-white rounded-lg flex items-center gap-2">
                     Resume 
@@ -184,14 +184,14 @@
             themeIcon.textContent = "🌙";
         } else {
             root.classList.remove("dark");
-            themeIcon.textContent = "☀";
+            themeIcon.textContent = "☀️";
         }
 
         themeToggle.addEventListener("click", () => {
             if (root.classList.contains("dark")) {
                 root.classList.remove("dark");
                 localStorage.setItem("theme", "light");
-                themeIcon.textContent = "☀";
+                themeIcon.textContent = "☀️";
             } else {
                 root.classList.add("dark");
                 localStorage.setItem("theme", "dark");
